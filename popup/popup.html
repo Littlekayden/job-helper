@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boss Hunter 设置</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <span class="logo">🎯</span>
+    <div>
+      <h1>Boss Hunter</h1>
+      <p>BOSS直聘求职助手</p>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><b id="st-today">0</b><span>今日打招呼</span></div>
+    <div class="stat"><b id="st-total">0</b><span>累计打招呼</span></div>
+    <div class="stat"><b id="st-skip">0</b><span>累计跳过</span></div>
+  </section>
+
+  <main>
+    <div class="field">
+      <label>打招呼语
+        <small>占位符：{jobName} 岗位名、{companyName} 公司名</small>
+      </label>
+      <textarea id="greeting" rows="3" placeholder="请输入打招呼内容"></textarea>
+    </div>
+
+    <div class="row">
+      <div class="field half">
+        <label>本轮上限</label>
+        <input id="maxGreet" type="number" min="1" max="200" />
+      </div>
+      <div class="field half">
+        <label>间隔(秒)</label>
+        <div class="range-inline">
+          <input id="minDelay" type="number" min="1" step="0.5" />
+          <span>~</span>
+          <input id="maxDelay" type="number" min="1" step="0.5" />
+        </div>
+      </div>
+    </div>
+
+    <div class="field switch-field">
+      <label>启用岗位过滤</label>
+      <label class="switch">
+        <input type="checkbox" id="filterEnabled" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="field">
+      <label>必含关键词 <small>逗号分隔，命中任一才打招呼，留空不限</small></label>
+      <input id="includeKw" type="text" placeholder="例如：前端,React,Vue" />
+    </div>
+
+    <div class="field">
+      <label>排除关键词 <small>逗号分隔，命中任一则跳过</small></label>
+      <input id="excludeKw" type="text" placeholder="例如：外包,驻场,销售" />
+    </div>
+
+    <div class="row">
+      <div class="field half">
+        <label>薪资下限(K)</label>
+        <input id="minSalary" type="number" min="0" />
+      </div>
+      <div class="field half">
+        <label>薪资上限(K)</label>
+        <input id="maxSalary" type="number" min="0" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label>公司规模排除 <small>逗号分隔，匹配公司标签</small></label>
+      <input id="excludeScale" type="text" placeholder="例如：0-20人" />
+    </div>
+  </main>
+
+  <footer>
+    <button id="saveBtn" class="btn primary">保存设置</button>
+    <button id="runBtn" class="btn">在当前页运行</button>
+    <button id="resetBtn" class="btn ghost" title="清空统计与去重记录">重置统计</button>
+    <p id="hint" class="hint"></p>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

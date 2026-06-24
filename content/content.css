@@ -1,0 +1,125 @@
+/* content/content.css — Boss Hunter 悬浮控制面板样式 */
+
+#boss-hunter-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  color: #2b3340;
+  z-index: 999999;
+  overflow: hidden;
+  user-select: none;
+}
+
+#boss-hunter-panel .bh-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, #00bebd, #12c2a0);
+  color: #fff;
+  cursor: default;
+}
+
+#boss-hunter-panel .bh-title {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+#boss-hunter-panel .bh-min {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 6px;
+  line-height: 1;
+}
+
+#boss-hunter-panel.bh-collapsed .bh-body {
+  display: none;
+}
+
+#boss-hunter-panel .bh-body {
+  padding: 12px 14px;
+}
+
+#boss-hunter-panel .bh-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+#boss-hunter-panel .bh-stats b {
+  color: #00bebd;
+  font-size: 15px;
+}
+
+#boss-hunter-panel .bh-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#boss-hunter-panel .bh-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid #d4dae3;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+#boss-hunter-panel .bh-btn:hover:not(:disabled) {
+  border-color: #00bebd;
+  color: #00bebd;
+}
+
+#boss-hunter-panel .bh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#boss-hunter-panel .bh-primary {
+  background: #00bebd;
+  border-color: #00bebd;
+  color: #fff;
+}
+
+#boss-hunter-panel .bh-primary:hover:not(:disabled) {
+  background: #00a8a7;
+  color: #fff;
+}
+
+#boss-hunter-panel .bh-log {
+  height: 150px;
+  overflow-y: auto;
+  background: #1e2530;
+  color: #c8d2e0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.6;
+  font-family: "Consolas", "Menlo", monospace;
+}
+
+#boss-hunter-panel .bh-log-line {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+#boss-hunter-panel .bh-log::-webkit-scrollbar {
+  width: 6px;
+}
+#boss-hunter-panel .bh-log::-webkit-scrollbar-thumb {
+  background: #3a4456;
+  border-radius: 3px;
+}

@@ -1,0 +1,15 @@
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log
+
+# 编辑器
+.vscode/
+.idea/
+
+# Claude 本地配置
+.claude/settings.local.json
+
+# 打包产物
+*.zip
+dist/
