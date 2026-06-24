@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Boss Hunter - BOSS直聘求职助手",
+  "name": "__MSG_appName__",
   "version": "1.0.0",
-  "description": "BOSS直聘自动打招呼、批量沟通、岗位智能过滤与投递统计助手，稳定运行于 Edge / Chrome。",
+  "description": "__MSG_appDesc__",
   "default_locale": "zh_CN",
   "icons": {
     "16": "icons/icon16.png",
@@ -11,7 +11,7 @@
   },
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "Boss Hunter 求职助手",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",

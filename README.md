@@ -70,6 +70,9 @@
 ```
 job-helper/
 ├── manifest.json              # 扩展清单（Manifest V3）
+├── _locales/                  # 国际化语言包
+│   ├── zh_CN/messages.json    # 默认语言（简体中文）
+│   └── en/messages.json
 ├── background/
 │   └── background.js          # 后台 Service Worker：配置、统计、消息路由
 ├── content/

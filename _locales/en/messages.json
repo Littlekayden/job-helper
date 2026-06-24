@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Boss Hunter - Job Hunting Assistant",
+    "description": "Extension name"
+  },
+  "appDesc": {
+    "message": "Auto-greeting, batch messaging, smart job filtering and stats for BOSS Zhipin. Runs on Edge / Chrome.",
+    "description": "Extension description"
+  },
+  "actionTitle": {
+    "message": "Boss Hunter Assistant",
+    "description": "Toolbar icon title"
+  }
+}
